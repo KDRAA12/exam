@@ -34,8 +34,8 @@ public class PropertyController {
          leaseService.addLeaseToProperty(property,lease);
     }
 
-    @GetMapping
-    public Double projectedIncome(@RequestParam(required = false) String state){
+    @GetMapping("/income")
+    public Double projectedIncome(@RequestParam String state){
         return propertyService.projectedIncome(state);
     }
 
